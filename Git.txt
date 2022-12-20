@@ -1,19 +1,44 @@
-查看分支
+﻿查看分支
 1.查看本地所有分支：git branch
 2.查看远程有哪些分支：git branch -r
 3.查看所有分支（本地和远程的）：git branch -a
 
 创建分支
 1.只创建分支（不切换分支）：git branch [branch name]
+
 2.创建并切换分支：git chechout -b [branch name]
 
 切换分支
+
 1.切换本地分支：git chechout  [branch name]
 
 提交分支
+
 1.提交分支到远程：git push origin [branch name]
 
 删除分支
+
 1.删除本地分支：git branch -d [branch name]
-  (注意：1、不能删除当前正所处的分支；2、不能删除不存在的分支；)
+ (注意：1、不能删除当前正所处的分支；2、不能删除不存在的分支；)
+
+
 2. 删除远程分支：git push origin :[branch name]
+
+Example:
+            echo "# F" >> README.md
+            git init
+            git add README.md
+            git commit -m "first commit"
+            git branch -M main
+            git remote add origin xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            git push -u origin main
+            git remote rm origin 删除远程分支
+
+git pull
+常用报错
+  提示：更新被拒绝，因为远程包含您所做的工作
+  提示：不要在本地使用。这通常是由另一个存储库推送引起的
+  提示：对于相同的ref。您可能需要首先集成远程更改
+  提示：（例如，“git pull…”）然后再次按下。
+
+ 
